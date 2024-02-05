@@ -42,6 +42,7 @@ export class StatsComponent {
     });
   }
 
+  
   getWeeksArray() {
     const weekArray = [];
     for (var i = 0; i < 30; i++) {

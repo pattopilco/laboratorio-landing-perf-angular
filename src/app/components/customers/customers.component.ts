@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
-import * as moment from 'moment';
+
 
 interface Customer {
   title: string;
@@ -43,6 +43,13 @@ export class CustomersComponent {
       thinking to further the overall value proposition.`,
       image: 'assets/images/customer-2.png',
     },
+    {
+      title: 'TEST',
+      date: new Date(2024, 1, 1),
+      text: `Iterative approaches to corporate strategy foster collaborative
+      thinking to further the overall value proposition.`,
+      image: 'assets/images/customer-2.png',
+    },
   ];
 
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
@@ -54,9 +61,5 @@ export class CustomersComponent {
   }
   slidePrev() {
     this.swiper?.swiperRef?.slidePrev();
-  }
-
-  calcTimeAgo(date: Date) {
-    return moment(date).fromNow();
   }
 }
